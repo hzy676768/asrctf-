@@ -162,9 +162,7 @@ Respond as The Goon.
     });
 
     const data = await response.json();
-    let output = data.message?.content || data.choices?.[0]?.message?.content || "No response.";
-
-    // Step 3: naive redaction layer
+    let output = data.message?.content || data.choices?.[0]?.message?.content || "No 
     output = redactFlag(output);
 
     appendMessage("bot", "Goon: " + output);
