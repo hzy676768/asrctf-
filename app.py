@@ -72,7 +72,6 @@ def chat():
         if not user_text:
             return jsonify({"reply": "empty message bro"}), 400
 
-        # Server-side filter
         if naive_filter(user_text):
             return jsonify({"reply": "nice try L bozo womp womp"})
 
