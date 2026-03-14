@@ -34,14 +34,14 @@ BLOCKED_WORDS = [
     "vault",
     "reveal",
     "give",
-    "provide"
-    "internal"
-    "system"
-    "prompt"
-    "audit"
-    "admin"
-    "token"
-    "password"
+    "provide",
+    "internal",
+    "system",
+    "prompt",
+    "audit",
+    "admin",
+    "token",
+    "password",
 ]
 
 
