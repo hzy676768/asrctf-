@@ -1,1 +1,4 @@
-
+Challenge Name: RageGoon
+Challenge Description: The Number 1 ASR Goon is protecting Diddy's secrets, the flag. Can you expose Diddy before he kidnaps you onto his island?
+Flag Format : ASRCTF{...}
+Author: hzy676768
