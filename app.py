@@ -112,10 +112,8 @@ def chat():
         
         if "choices" in result:
             output = result["choices"][0]["message"]["content"]
-        
         elif "message" in result:
             output = result["message"]["content"]
-            
         if not output:
             output = "No response"
             
