@@ -107,20 +107,24 @@ def chat():
         print("A")
 
         result = response.json()
-
-        output = (
-            result.get("message", {}).get("content")
-            or result.get("choices", [{}])[0].get("message", {}).get("content")
-            or "No response"
-        )
-
-        print(result)
+        
+        output = None
+        
+        if "choices" in result:
+            output = result["choices"][0]["message"]["content"]
+        
+        elif "message" in result:
+            output = result["message"]["content"]
+            
+        if not output:
+            output = "No response"
+            
         output = redact_flag(output)
-
+        
         return jsonify({"reply": output})
 
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+    return jsonify({"reply": f"error: {str(e)}"}), 500
 
 if __name__ == "__main__":
 
