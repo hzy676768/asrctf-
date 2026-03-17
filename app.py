@@ -77,7 +77,7 @@ def chat():
             return jsonify({"reply": "nice try L bozo womp womp"})
 
         payload = {
-            "model": "gpt-oss",
+            "model": "llama3",
             "stream": False,
             "messages": [
                 {"role": "system", "content": SYSTEM_PROMPT},
