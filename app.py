@@ -121,7 +121,7 @@ def chat():
         
         return jsonify({"reply": output})
 
-        except Exception as e:
+    except Exception as e:
         return jsonify({"reply": f"error: {str(e)}"}), 500
 
 if __name__ == "__main__":
