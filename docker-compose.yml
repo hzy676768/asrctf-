@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: ragegoon-app
+    container_name: asrctf-app
     ports:
       - "5000:5000"
     env_file:
@@ -18,7 +18,7 @@ services:
 
   ollama:
     image: ollama/ollama:latest
-    container_name: ragegoon-ollama
+    container_name: asrctf-ollama
     ports:
       - "11434:11434"
     volumes:
